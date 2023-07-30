@@ -30,7 +30,11 @@ kubectl argo rollouts get rollout demo-helm-guestbook
 
 ```bash
 kubectl -n default get rs
-kubectl -n default get svc
+
+# 새로운 pod를 select
+kubectl -n default describe svc demo-helm-guestbook-preview | grep "Selector:"
+# 기존 pod를 select
+kubectl -n default describe svc demo-helm-guestbook | grep "Selector:"
 ```
 
 ![](./imgs/blue_green3.png)
