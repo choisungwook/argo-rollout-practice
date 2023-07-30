@@ -26,3 +26,7 @@ kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/rele
 curl -LO https://github.com/argoproj/argo-rollouts/releases/download/v1.5.1/dashboard-install.yaml
 kubectl apply -n argo-rollouts -f dashboard-install.yaml
 ```
+
+# 예제
+* [canary](./example/quick-start/)
+* [blue/green](./example/blue_green/)
