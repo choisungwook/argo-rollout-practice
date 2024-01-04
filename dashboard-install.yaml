@@ -107,7 +107,7 @@ spec:
   - port: 3100
     protocol: TCP
     targetPort: 3100
-    nodePort: 30950
+    nodePort: 30960
   selector:
     app.kubernetes.io/name: argo-rollouts-dashboard
 ---
