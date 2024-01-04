@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
       - name: helm-guestbook
-        image: "gcr.io/heptio-images/ks-guestbook-demo:0.2"
+        image: "gcr.io/heptio-images/ks-guestbook-demo:0.1"
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
