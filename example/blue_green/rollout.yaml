@@ -8,7 +8,7 @@ metadata:
     release: demo
     heritage: Helm
 spec:
-  replicas: 1
+  replicas: 2
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -26,20 +26,19 @@ spec:
         release: demo
     spec:
       containers:
-        - name: helm-guestbook
-          image: "gcr.io/heptio-images/ks-guestbook-demo:0.1"
-          imagePullPolicy: IfNotPresent
-          ports:
-            - name: http
-              containerPort: 80
-              protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
-          resources:
-            {}
+      - name: helm-guestbook
+        image: "gcr.io/heptio-images/ks-guestbook-demo:0.1"
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: http
+          containerPort: 80
+          protocol: TCP
+        livenessProbe:
+          httpGet:
+            path: /
+            port: http
+        readinessProbe:
+          httpGet:
+            path: /
+            port: http
+        resources: {}
