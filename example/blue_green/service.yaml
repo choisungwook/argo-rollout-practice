@@ -8,13 +8,13 @@ metadata:
     release: demo
     heritage: Helm
 spec:
-  type: NodePort
+  # type: NodePort
   ports:
-    - port: 80
-      targetPort: http
-      protocol: TCP
-      name: http
-      nodePort: 30951
+  - port: 80
+    targetPort: http
+    protocol: TCP
+    name: http
+    # nodePort: 30951
   selector:
     app: helm-guestbook
     release: demo
@@ -29,13 +29,13 @@ metadata:
     release: demo
     heritage: Helm
 spec:
-  type: NodePort
+  # type: NodePort
   ports:
-    - port: 80
-      targetPort: http
-      protocol: TCP
-      name: http
-      nodePort: 30952
+  - port: 80
+    targetPort: http
+    protocol: TCP
+    name: http
+    # nodePort: 30952
   selector:
     app: helm-guestbook
     release: demo
